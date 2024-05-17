@@ -12,7 +12,7 @@ on:
 jobs:
   build:
 
-    runs-on: runs-on: codebuild-GitHubSelfHostedDemo-${{ github.run_id }}-${{ github.run_attempt }}
+    runs-on: codebuild-GitHubSelfHostedDemo-${{ github.run_id }}-${{ github.run_attempt }}
 
     strategy:
       matrix:
