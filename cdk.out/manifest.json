@@ -1,0 +1,131 @@
+{
+  "version": "36.0.0",
+  "artifacts": {
+    "CdkHelloWorldStack.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "CdkHelloWorldStack.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "CdkHelloWorldStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "CdkHelloWorldStack.template.json",
+        "terminationProtection": false,
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/0298e94c85797ea4bd7356ebec64da071ea675073d625ace39f5f3a847e5bfef.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "CdkHelloWorldStack.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-lookup-role-${AWS::AccountId}-${AWS::Region}",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "CdkHelloWorldStack.assets"
+      ],
+      "metadata": {
+        "/CdkHelloWorldStack/HelloWorldFunction/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HelloWorldFunctionServiceRole8E0BD458"
+          }
+        ],
+        "/CdkHelloWorldStack/HelloWorldFunction/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HelloWorldFunctionB2AB6E79"
+          }
+        ],
+        "/CdkHelloWorldStack/HelloWorldApi/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HelloWorldApi9E278160"
+          }
+        ],
+        "/CdkHelloWorldStack/HelloWorldApi/Deployment/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HelloWorldApiDeployment65F822B545ca12ea3d6a65e6dad37bafecc518e5"
+          }
+        ],
+        "/CdkHelloWorldStack/HelloWorldApi/DeploymentStage.prod/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HelloWorldApiDeploymentStageprod2E271AE0"
+          }
+        ],
+        "/CdkHelloWorldStack/HelloWorldApi/Endpoint": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HelloWorldApiEndpointAD496187"
+          }
+        ],
+        "/CdkHelloWorldStack/HelloWorldApi/Default/hello/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HelloWorldApihello69E87CE7"
+          }
+        ],
+        "/CdkHelloWorldStack/HelloWorldApi/Default/hello/GET/ApiPermission.CdkHelloWorldStackHelloWorldApi9996E75E.GET..hello": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HelloWorldApihelloGETApiPermissionCdkHelloWorldStackHelloWorldApi9996E75EGEThelloD5F30769"
+          }
+        ],
+        "/CdkHelloWorldStack/HelloWorldApi/Default/hello/GET/ApiPermission.Test.CdkHelloWorldStackHelloWorldApi9996E75E.GET..hello": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HelloWorldApihelloGETApiPermissionTestCdkHelloWorldStackHelloWorldApi9996E75EGEThello6129B92A"
+          }
+        ],
+        "/CdkHelloWorldStack/HelloWorldApi/Default/hello/GET/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HelloWorldApihelloGET9D1EC06B"
+          }
+        ],
+        "/CdkHelloWorldStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/CdkHelloWorldStack/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable"
+          }
+        ],
+        "/CdkHelloWorldStack/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/CdkHelloWorldStack/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "CdkHelloWorldStack"
+    },
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    }
+  }
+}
